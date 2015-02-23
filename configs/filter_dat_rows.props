@@ -1,0 +1,3 @@
+inputDatFile = data/uniprot-rel_2015_01/uniprot_sprot.dat
+outputDatFile = data/uniprot-rel_2015_01/0_uniprot_sprot_rowfiltered.dat
+throwOutRows = DT,OG,CC,R

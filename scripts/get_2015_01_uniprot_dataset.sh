@@ -11,7 +11,9 @@ pushd ${thisDir}/../data/uniprot-rel_2015_01 > /dev/null
   echo "Swissprot dataset downloaded at $(date)" > last_download_when.txt
   echo "Extracting files ..."
   tar xvfz uniprot_sprot-only2015_01.tar.gz
-  # todo: more levels of compression?
+  echo "Unzipping files ..."
+  gunzip uniprot_sprot.dat.gz
+  gunzip uniprot_sprot.fasta.gz
   echo "Done."
 popd > /dev/null
 

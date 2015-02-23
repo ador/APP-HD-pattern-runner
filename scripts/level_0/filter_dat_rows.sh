@@ -23,7 +23,7 @@ pushd ${thisDir} > /dev/null
 
   pushd ${protkaDir} > /dev/null
 
-    java -jar java/build/libs/PPsearch.jar protka.main.FilterRows $propfile
+    java -jar java/build/libs/PPsearch.jar FILTER_ROWS $propfile
 
   popd > /dev/null
 popd > /dev/null
