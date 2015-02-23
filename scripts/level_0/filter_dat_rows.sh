@@ -15,15 +15,15 @@ pushd ${thisDir} > /dev/null
   expected="/"
   conf=$2
   if [ $expected = ${conf:0:1} ]; then
-    propfile=$1
+    propfile=$conf
   else
-    propfile=$(pwd)/$1
+    propfile=$(pwd)/$conf
   fi
   echo "Using settings from:  $propfile"
 
   pushd ${protkaDir} > /dev/null
 
-    java -jar java/build/libs/java.jar protka.main.FilterRows $propfile
+    java -jar java/build/libs/PPsearch.jar protka.main.FilterRows $propfile
 
   popd > /dev/null
 popd > /dev/null
