@@ -1,29 +1,19 @@
 #!/bin/bash
 
-# ? note: propfile paths are relative to the project root (APP-HD-pattern-runner) directory
+# Note: paths should be absolute
 
 # checking number of params
 if [[ $# -ne 2 ]] ; then
-  echo "Sample usage : ./filter_dat_rows.sh <path to ProteinPatternSearch repo> <properties file>"
+  echo "Sample usage : ./filter_dat_rows.sh <absolute path to ProteinPatternSearch repo> <abs. path to properties file>"
   exit 2;
 fi
 
 thisDir=$(dirname $0) || false
 protkaDir=$1
+confFile=$2
 
-pushd ${thisDir} > /dev/null
-  expected="/"
-  conf=$2
-  if [ $expected = ${conf:0:1} ]; then
-    propfile=$conf
-  else
-    propfile=$(pwd)/$conf
-  fi
-  echo "Using settings from:  $propfile"
+pushd ${protkaDir} > /dev/null
 
-  pushd ${protkaDir} > /dev/null
+  java -jar java/build/libs/PPsearch.jar FILTER_ROWS $confFile
 
-    java -jar java/build/libs/PPsearch.jar FILTER_ROWS $propfile
-
-  popd > /dev/null
 popd > /dev/null
