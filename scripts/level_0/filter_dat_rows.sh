@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Note: paths should be absolute
-dockerConfPath=/home/yoda/git/APP-HD-pattern-runner/configs/level_0/filter_dat_rows.props
+dockerConfPath=/home/yoda/git/APP-HD-pattern-runner/configs/level_0/
+dockerConfFilename=filter_dat_rows.props
+dockerConf=${dockerConfPath}/${dockerConfFilename}
 dockerProtGitPath=/home/yoda/git/ProteinPatternSearch
 thisDir=$(dirname $0) || false
 
@@ -12,8 +14,8 @@ errMsg2b=" ./filter_dat_rows.sh <absolute path to ProteinPatternSearch repo> <ab
 
 # Branching on number of params: default values are for the docker image
 if [[ $# -eq 0 ]] ; then
-  protkaDir=$dockerProtGitPath
-  confFile=$dockerConfPath
+  protkaDir=${dockerProtGitPath}
+  confFile=${dockerConf}
 fi
 
 if [[ $# -eq 1 ]] ; then
