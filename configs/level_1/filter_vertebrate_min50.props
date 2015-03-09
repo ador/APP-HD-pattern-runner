@@ -1,0 +1,6 @@
+inputDatFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_01/level_0/uniprot_sprot_rowfiltered.dat
+inputFastaFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_01/uniprot_sprot.fasta
+outputDatFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_01/level_1/sprot_vertebrate_min50.dat
+outputFastaFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_01/level_1/sprot_vertebrate_min50.fasta
+matchProteinPatterns = OC:Vertebrata
+minSeqLength = 50
