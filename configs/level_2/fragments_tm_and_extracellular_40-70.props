@@ -1,0 +1,5 @@
+inputDatFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_1/sprot_euk_topology_min50.dat
+inputFastaFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_1/sprot_euk_topology_min50.fasta
+outputFastaFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_2/sprot_euk_fragments_40-70.fasta
+minLenOfExtracellularPart = 40
+maxLenOfExtracellularPart = 70
