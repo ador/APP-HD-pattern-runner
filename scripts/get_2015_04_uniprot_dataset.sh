@@ -4,10 +4,10 @@
 thisDir=$(dirname $0) || false
 
 # create a directory for the dataset if it does not exist
-mkdir -p ${thisDir}/../data/uniprot-rel_2015_01
-pushd ${thisDir}/../data/uniprot-rel_2015_01 > /dev/null
+mkdir -p ${thisDir}/../data/uniprot-rel_2015_04
+pushd ${thisDir}/../data/uniprot-rel_2015_04 > /dev/null
   echo "Starting download, might take a while ..."
-  wget ftp://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2015_01/knowledgebase/uniprot_sprot-only2015_01.tar.gz
+  wget ftp://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2015_04/knowledgebase/uniprot_sprot-only2015_04.tar.gz
   echo "Swissprot dataset downloaded at $(date)" > last_download_when.txt
   echo "Extracting files ..."
   tar xvfz uniprot_sprot-only2015_01.tar.gz
