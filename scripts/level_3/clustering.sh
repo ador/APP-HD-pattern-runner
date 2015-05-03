@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Prerequisite: get a kClust (http://www.ncbi.nlm.nih.gov/pubmed/23945046) binary:
-## either run "scripts/get_kClust.sh"
+## either run "tools/get_kClust.sh"
 ## or download manually from ftp://toolkit.lmb.uni-muenchen.de/pub/kClust/
 
 # Note: paths should be absolute
