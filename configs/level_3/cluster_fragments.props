@@ -1,0 +1,5 @@
+inputFastaFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_2/sprot_euk_fragments_40-70.fasta
+inputKClustResultDir = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_3/kclust_out
+outputFastaDir = /home/adri/ghub/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_3/clusters_fasta
+outFileNameBeginnings = sprot_euk_min8_cluster
+minClusterSize = 8
