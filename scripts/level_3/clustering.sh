@@ -1,5 +1,9 @@
 #!/bin/bash
 
+## Prerequisite: get a kClust (http://www.ncbi.nlm.nih.gov/pubmed/23945046) binary:
+## either run "scripts/get_kClust.sh"
+## or download manually from ftp://toolkit.lmb.uni-muenchen.de/pub/kClust/
+
 # Note: paths should be absolute
 dockerConfPath=/home/yoda/git/APP-HD-pattern-runner/configs/level_2/fragments_tm_and_extracellular_40-70.props
 dockerProtGitPath=/home/yoda/git/ProteinPatternSearch
@@ -44,24 +48,10 @@ kClustResultDir=`cat ${confFile} | grep "inputKClustResultDir" | cut -d'=' -f2`
 # get fasta input from confFile to use as an input param when running kClust
 inputFastaFile=`cat ${confFile} | grep "inputFastaFile" | cut -d'=' -f2`
 
-if [[ -d ${kClustResultDir} ]] ; then 
-
-  if [ "$(ls -A ${kClustResultDir})" ]; then
-      echo "${kClustResultDir} is not empty! Do you want to overwrite its contents? (y/n)\n"
-      read answer
-      if [[ ${answer} == *y* ]] ; then
-        rm -rf ${kClustResultDir}
-        mkdir -p ${kClustResultDir}
-      fi
-  else
-      echo "${kClustResultDir} is OK."
-  fi
-else
-  mkdir -p ${kClustResultDir}
-fi 
+mkdir -p ${kClustResultDir}
 
 # Running kClust
-bash ${kClustBinary} -i ${inputFastaFile} -d ${kClustResultDir} --filter-k 4 --filter-T 2 
+${kClustBinary} -i ${inputFastaFile} -d ${kClustResultDir} # --filter-k 4 --filter-T 2 
 
 if (($? > 0)); then
   echo "Some error happened while trying to run kClust!"
