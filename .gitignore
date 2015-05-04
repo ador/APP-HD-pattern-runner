@@ -1,2 +1,4 @@
 data/uniprot-*/
+tools/kClust
+tools/clustalo
 
