@@ -12,8 +12,8 @@ errMsg2b=" ./protein_fragments.sh <absolute path to ProteinPatternSearch repo> <
 
 # Branching on number of params: default values are for the docker image
 if [[ $# -eq 0 ]] ; then
-  protkaDir=$dockerProtGitPath
-  confFile=$dockerConfPath
+  protkaDir=${dockerProtGitPath}
+  confFile=${dockerConfPath}
 fi
 
 if [[ $# -eq 1 ]] ; then
@@ -35,6 +35,6 @@ fi
 # Running
 pushd ${protkaDir} > /dev/null
 
-  java -jar java/build/libs/PPsearch.jar TM_EXT_FRAGMENTS $confFile
+  java -jar java/build/libs/PPsearch.jar TM_EXT_FRAGMENTS ${confFile}
 
 popd > /dev/null
