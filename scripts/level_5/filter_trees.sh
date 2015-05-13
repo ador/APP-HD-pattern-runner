@@ -14,7 +14,7 @@ errMsg2b=" ./filter_trees.sh <absolute path to PhyTreeSearch repo> <absolute pat
 
 # Branching on number of params: default values are for the docker image
 if [[ $# -eq 0 ]] ; then
-  phyDir=$dockerPHyTreePath
+  phyDir=$dockerPhyTreePath
   confFile=$dockerConfPath
 fi
 
@@ -40,3 +40,7 @@ pushd ${phyDir} > /dev/null
   java -jar build/libs/phyTreeSearcher.jar ${confFile}
 
 popd > /dev/null
+
+# example:
+# ./scripts/level_5/filter_trees.sh /home/adri/ghub/PhyTreeSearch/ /home/adri/ghub/APP-HD-pattern-runner/configs/level_5/tree_filter_a.props
+

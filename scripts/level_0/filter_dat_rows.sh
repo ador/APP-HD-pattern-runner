@@ -37,6 +37,6 @@ fi
 # Running
 pushd ${protkaDir} > /dev/null
 
-  java -jar java/build/libs/PPsearch.jar FILTER_ROWS $confFile
+  java -jar java/build/libs/PPsearch.jar FILTER_DAT_ROWS $confFile
 
 popd > /dev/null

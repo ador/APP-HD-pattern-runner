@@ -10,7 +10,7 @@ outDir=$2
 
 mkdir -p ${outDir}
 
-# download clusttalOmega if its not here yet
+# download clustalOmega if its not here yet
 if [ ! -f ${clustalOmega} ] ; then 
   bash ${thisAbsDir}/../../tools/get_clustalOmega.sh ${thisAbsDir}/../../tools
 fi
