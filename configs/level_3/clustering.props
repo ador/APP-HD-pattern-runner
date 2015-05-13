@@ -1,6 +1,6 @@
 inputFastaFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_2/sprot_euk_fragments_40-70.fasta
 proteinStatsArffFile = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_3/euk_fragments.arff
-numberOfClusters = 5
-randomSeed = 30
-wekaOutClusterPath = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_3/euk_weka_5_clusters_s_30.clu
-outputFastaFilesPrefix = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_3/cluster_5_s30_
+numberOfClusters = 50
+randomSeed = 42
+wekaOutClusterPath = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_3/euk_weka_50_clusters_s42.clu
+outputFastaFilesPrefix = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_3/cluster_50_s42_
