@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Note: paths should be absolute
-dockerConfPath=/home/yoda/git/APP-HD-pattern-runner/configs/level_1/filter_vert_w_topology_min50.props
+dockerConfPath=/home/yoda/git/APP-HD-pattern-runner/configs/level_1/filter_euk_w_topology_min50.props
 dockerProtGitPath=/home/yoda/git/ProteinPatternSearch
 thisDir=$(dirname $0) || false
 
