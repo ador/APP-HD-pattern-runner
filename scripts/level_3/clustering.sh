@@ -3,7 +3,7 @@
 # Note: paths should be absolute
 
 # If you are not using Docker, update paths here!
-dockerClusConfPath=/home/yoda/git/APP-HD-pattern-runner/configs/level_3/clustering.props
+dockerClusConfPath=/home/yoda/git/APP-HD-pattern-runner/configs/level_3/cluster_with_weka.props
 
 dockerProtGitPath=/home/yoda/git/ProteinPatternSearch
 thisDir=$(dirname $0) || false
@@ -35,11 +35,13 @@ if [[ $# -gt 2 ]] ; then
   exit 2;
 fi
 
-# create arff file with attributes/features of protein fragments' amino acid stats
 pushd ${protkaDir} > /dev/null
 
+  # create arff file with attributes/features of protein fragments' amino acid stats
   java -jar java/build/libs/PPsearch.jar STATS_ARFF_FOR_WEKA ${confClustering}
+  echo "Protein stats created, starting clustering... "
   java -jar java/build/libs/PPsearch.jar WEKA_CLUSTERING ${confClustering}
+  echo "Clusters created, writing results..."
   java -jar java/build/libs/PPsearch.jar SPLIT_FASTA_TO_CLUSTERS_WEKA ${confClustering}
 
 popd > /dev/null
