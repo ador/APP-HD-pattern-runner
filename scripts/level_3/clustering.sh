@@ -4,7 +4,6 @@
 
 # If you are not using Docker, update paths here!
 dockerClusConfPath=/home/yoda/git/APP-HD-pattern-runner/configs/level_3/cluster_with_weka.props
-
 dockerProtGitPath=/home/yoda/git/ProteinPatternSearch
 thisDir=$(dirname $0) || false
 thisAbsDir=$(readlink -f "$thisDir")
