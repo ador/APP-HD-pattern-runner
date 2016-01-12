@@ -1,9 +1,12 @@
 #!/bin/bash 
 
-targetDir="$HOME"/tools
+thisDir=$(dirname $0) || false
+thisAbsDir=$(readlink -f "$thisDir")
+
+targetDir=${thisAbsDir}/tools
 
 if [[ $# -gt 0 ]] ; then
-  targetDir="$HOME"/$1
+  targetDir="$1"
 fi
 
 mkdir -p ${targetDir}
