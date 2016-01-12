@@ -3,7 +3,7 @@
 thisDir=$(dirname $0) || false
 thisAbsDir=$(readlink -f "$thisDir")
 
-targetDir=${thisAbsDir}/tools
+targetDir=${thisAbsDir}
 
 if [[ $# -gt 0 ]] ; then
   targetDir="$1"
