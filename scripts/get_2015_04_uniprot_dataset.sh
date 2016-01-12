@@ -10,7 +10,7 @@ pushd ${thisDir}/../data/uniprot-rel_2015_04 > /dev/null
   wget ftp://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2015_04/knowledgebase/uniprot_sprot-only2015_04.tar.gz
   echo "Swissprot dataset downloaded at $(date)" > last_download_when.txt
   echo "Extracting files ..."
-  tar xvfz uniprot_sprot-only2015_01.tar.gz
+  tar xvfz uniprot_sprot-only2015_04.tar.gz
   echo "Unzipping files ..."
   gunzip uniprot_sprot.dat.gz
   gunzip uniprot_sprot.fasta.gz
