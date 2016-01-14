@@ -1,0 +1,6 @@
+treeFilesDir = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_4/
+fastaFilesDir = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_3/
+outputTreeFilesDir = /home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_5/weka_c50_min7_55/
+seqPattern = HD
+minLeafNum = 7
+minPatternPercent = 55
