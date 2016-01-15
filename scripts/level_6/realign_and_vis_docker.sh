@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eu
 
 # Note: paths should be absolute
 dockerConfLevel5OutPath=/home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_5/weka_c50_min7_55/
@@ -6,6 +6,8 @@ dockerConfLevel6AlignPath=/home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_
 dockerConfLevel6OutPath=/home/yoda/git/APP-HD-pattern-runner/data/uniprot-rel_2015_04/level_6/generated_tex/weka_c50_min7_55/
 
 thisDir=$(dirname $0) || false
+
+mkdir -p ${dockerConfLevel6OutPath}
 
 pushd ${thisDir}
   ./realign_subtree_seqs.sh ${dockerConfLevel5OutPath} ${dockerConfLevel6AlignPath}
